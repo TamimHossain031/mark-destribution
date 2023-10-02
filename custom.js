@@ -9,13 +9,16 @@ let percent_txt = document.querySelector('.percent');
 let comment_txt = document.querySelector('.comment');
 
 btn1.addEventListener('click',()=>{
-    let class_detail = parseInt(class_sub.value);
+   
+    let class_detail = class_sub.value[0];
+    let sub_mark = parseFloat(class_sub.value.slice(2));
     let marks = digit.value;
+    console.log(sub_mark)
     const array = marks.split(',');
 
 
-    console.log(array.length);
-    console.log(class_detail)
+    // console.log(array.length);
+    // console.log(class_detail)
     if(array.length == class_detail){
 
     
@@ -32,7 +35,7 @@ btn1.addEventListener('click',()=>{
         total_sum = sum;
     }
 
-    let percent_value = total_sum / class_detail;
+    let percent_value = total_sum / sub_mark;
 
     let comment;
     if(percent_value >= 90 && percent_value <=100){
