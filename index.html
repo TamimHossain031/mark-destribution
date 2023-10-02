@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Number Destribution</title>
+</head>
+<body>
+    <section id="main">
+        <h1 class="title">Mark Calculation</h1>
+        <p class="message">Enter all subject mark : </p>
+        <div>
+            <input id="digit" type="text" placeholder="Enter Number...">
+            <select id="class">
+                <option value="">Choose Class</option>
+                <option value="6">Class One</option>
+                <option value="6">Class Two</option>
+                <option value="8">Class Three</option>
+                <option value="8">Class Four</option>
+                <option value="6">Class Five</option>
+            </select>
+
+            <button id="button-1" type="submit">Show Result</button>
+            <button id="button-2" type="submit">Reset</button>
+        </div>
+
+        <table>
+            <p class="show"></p>
+            <tr>
+                <td>Total Number</td>
+                <td>:</td>
+                <td class="total"></td>
+            </tr>
+            <tr>
+                <td>Percentage</td>
+                <td>:</td>
+                <td class="percent"></td>
+            </tr>
+            <tr>
+                <td>Comment</td>                
+                <td>:</td>
+                <td class="comment"></td>
+            </tr>
+            
+        </table>
+    </section>
+
+    <script src="./custom.js"></script>
+</body>
+</html>
