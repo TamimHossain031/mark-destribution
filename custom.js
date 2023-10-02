@@ -7,6 +7,7 @@ let main = document.querySelector('#main');
 let total_txt=document.querySelector('.total');
 let percent_txt = document.querySelector('.percent');
 let comment_txt = document.querySelector('.comment');
+let show = document.querySelector('.show');
 
 btn1.addEventListener('click',()=>{
    
@@ -19,9 +20,7 @@ btn1.addEventListener('click',()=>{
 
     // console.log(array.length);
     // console.log(class_detail)
-    if(array.length == class_detail){
-
-    
+    if(array.length == class_detail){    
     int_array=[];
     for(let int of array){        
         int_array.push(parseInt(int));
@@ -30,7 +29,8 @@ btn1.addEventListener('click',()=>{
     let sum = int_array.reduce((a,b)=>a+b,0);
     let total_sum;
     if (sum == NaN){
-        total_sum = ' This  is not a number'
+        total_sum = ' This  is not a number';
+        
     }else{
         total_sum = sum;
     }
@@ -69,7 +69,7 @@ btn1.addEventListener('click',()=>{
      total_txt.innerHTML='';
     percent_txt.textContent = '';
     comment_txt.textContent = '';
-    message.textContent = `Add more ${(class_detail - array.length)} subject mark : `;
+    message.textContent = `Add total ${(class_detail)} subject mark : `;
 }
     
     
