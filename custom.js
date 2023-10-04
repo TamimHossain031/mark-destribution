@@ -5,6 +5,8 @@ let message = document.querySelector('.message');
 let class_sub = document.getElementById('class');
 let btn1 = document.querySelector('#button-1');
 let btn2 = document.querySelector('#button-2');
+let btn3 = document.querySelector('#button-3');
+let btn4 = document.querySelector('#button-4');
 let main = document.querySelector('#main');
 let total_txt=document.querySelector('.total');
 let percent_txt = document.querySelector('.percent');
@@ -33,7 +35,7 @@ btn1.addEventListener('click',()=>{
     component.sub_avgmark = sub_avgmark;
 
     // Call calculate function===
-    console.log(class_detail_a)
+    
     class_detail_a != ' ' ? calculate(component) : (message.textContent = 'Give Class Name : ') && color();
     
 });
@@ -154,3 +156,4 @@ const color = () =>{
 
 // Reset all value ===
 btn2.addEventListener('click',reset);
+
