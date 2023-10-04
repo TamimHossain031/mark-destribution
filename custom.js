@@ -36,12 +36,13 @@ btn1.addEventListener('click',()=>{
 
     // Call calculate function===
     
-    class_detail_a != ' ' ? calculate(component) : (message.textContent = 'Give Class Name : ') && color();
+    class_detail_a != ' ' ? calculate(component) : (message.textContent = 'Give Class Name : ') && colorRed();
     
 });
 
 // Reset function ==== 
 const reset = ()=>{
+    colorNrl();
     digit.value = '';
     total_txt.innerHTML='';
     percent_txt.textContent = '';
@@ -82,7 +83,7 @@ let calculate = (component)=>{
         
     }
     // error handling ===
-    color();
+    colorRed();
     component.err ? message.textContent = component.err : delete component.err;
     
    
@@ -144,13 +145,18 @@ let result = (component) =>{
     total_txt.innerHTML = sum;
     percent_txt.textContent = percent + '%';
     comment_txt.textContent = comment;
-    message.textContent =  component.err ? component.err && color : 'Good Job ! Say to Tamim Thanks :  ';      
+    message.textContent =  component.err ? component.err && colorRed : 'Good Job ! Say to Tamim Thanks :  ' ;      
    
 }
 
-const color = () =>{
+const colorRed = () =>{
     message.style.color = 'red';
     message.style.fontStyle = 'italic';
+    
+}
+const colorNrl = () =>{
+    message.style.color = '#fff';
+    message.style.fontStyle = 'normal';
     
 }
 
