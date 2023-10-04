@@ -29,7 +29,7 @@ body{
     padding-block:20px;
 }
 .message{
-    font-size: 16px;
+    font-size: 14px;
     margin:10px;
 }
 
@@ -96,4 +96,15 @@ table{
 tr{
     margin:5px 0;
     color:#fff;
+}
+.author-name{
+    color:#22a6b3;
+    font-size: 12px;
+    float:right;
+    margin-top:10px;
+    letter-spacing:0.1em;
+}
+.author-name a{
+    color: #fff;
+    
 }

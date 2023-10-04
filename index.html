@@ -7,24 +7,36 @@
     <title>Number Destribution</title>
 </head>
 <body>
+    <!-- School students mark calculation -->
     <section id="main">
+        <!-- Title -->
         <h1 class="title">Mark Calculation</h1>
         <p class="message">Enter all subject mark : </p>
+
+        <!-- Input field -->
         <div class="input-field">
             <input id="digit" type="text" placeholder="Enter Number...">
+            <!-- Select class Name -->
             <select id="class">
-                <option selected="selected" >Choose Class</option>
+                <option value=" " >Choose Class</option>
+                <option value="4,3.5">Class play</option>
+                <option value="5,4">Class Nursery</option>
                 <option value="6,4.5">Class One</option>
-                <option value="6">Class Two</option>
-                <option value="8">Class Three</option>
-                <option value="8">Class Four</option>
-                <option value="6">Class Five</option>
+                <option value="6,4.5">Class Two</option>
+                <option value="8,7.5">Class Three</option>
+                <option value="8,7.5">Class Four</option>
+                <option value="6,6">Class Five</option>
+                <option value="10,4.5">Class six</option>
+                <option value="10,4.5">Class Seven</option>
+                <option value="7,7">Class Eight</option>
+                <option value="11,4.5">Class Nine</option>
             </select>
-
+            <!-- Show result button -->
             <button id="button-1" type="submit">Show Result</button>
+            <!-- reset button -->
             <button id="button-2" type="submit">Reset</button>
         </div>
-
+        <!-- result table -->
         <table>
             <p class="show"></p>
             <tr>
@@ -44,8 +56,11 @@
             </tr>
             
         </table>
-    </section>
 
+        <span class="author-name">Design & Develop By <a href="https://web.facebook.com/massenger.net">Tamim </a></span>
+    </section>
+    
+    <!-- Script -->
     <script src="./custom.js"></script>
 </body>
 </html>
