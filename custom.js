@@ -55,7 +55,7 @@ let calculate = (component)=>{
     const [array,subjects] = [component.array,component.subjects];
    //check string ==
     if (array[0] == ''){
-        component.err = ' Input Field is Empty : ';
+        component.err = '<span class="span">*</span> Input Field is Empty : ';
     
     }else if(array.length == subjects){           
         // string to int ===
@@ -79,12 +79,12 @@ let calculate = (component)=>{
 
     }else{
         let sub_err = subjects > array.length ? subjects - array.length : array.length - subjects;
-        component.err =  subjects > array.length ? `<span class='span'> Add ${sub_err} subject number </span>`:`<span class ='span'> Remove ${sub_err} subject number </span>`;
+        component.err =  subjects > array.length ? `<span class='span'>* </span> Add ${sub_err} subject number`:`<span class ='span'> *</span>Remove ${sub_err} subject number `;
         
     }
     // error handling ===
     colorRed();
-    component.err ? message.textContent = component.err : delete component.err;
+    component.err ? message.innerHTML = component.err : delete component.err;
     
    
 }
