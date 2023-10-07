@@ -36,7 +36,7 @@ btn1.addEventListener('click',()=>{
 
     // Call calculate function===
     
-    class_detail_a != ' ' ? calculate(component) : (message.textContent = 'Give Class Name : ') && colorRed();
+    class_detail_a != ' ' ? calculate(component) : (message.innerHTML = '<span class="span">*</span>Give Class Name : ') && colorRed();
     
 });
 
@@ -47,7 +47,7 @@ const reset = ()=>{
     total_txt.innerHTML='';
     percent_txt.textContent = '';
     comment_txt.textContent = '';
-    message.textContent = 'Enter all subject mark :'
+    message.innerHTML = '<span class="span">*</span>Enter all subject mark :'
 };
 
 // Calculation function ====
@@ -63,7 +63,7 @@ let calculate = (component)=>{
         int_array=[];
             
         for(let int of array){    
-            int>=0 && int<=100 ? int_array.push(parseInt(int)) && delete component.err : component.err = 'Give Real Number ...';                    
+            int>=0 && int<=100 ? int_array.push(parseInt(int)) && delete component.err : component.err = "<span class='span'>*</span>Give Real Number ...";                    
         }
         
         if(int_array.length == subjects){
@@ -73,13 +73,13 @@ let calculate = (component)=>{
             // call percent function ==      
             percent(component);
         }else{
-            message.textContent = component.err;
+            message.innerHTML = component.err;
             
         }
 
     }else{
         let sub_err = subjects > array.length ? subjects - array.length : array.length - subjects;
-        component.err =  subjects > array.length ? ` Add ${sub_err} subject number `:` Remove ${sub_err} subject number `;
+        component.err =  subjects > array.length ? `<span class='span'> Add ${sub_err} subject number </span>`:`<span class ='span'> Remove ${sub_err} subject number </span>`;
         
     }
     // error handling ===
@@ -99,7 +99,7 @@ let percent = (component)=>{
     const [sum,avg] = [component.sum,component.sub_avgmark];
     
     // check sum ===        
-    let total_sum = sum ? sum/avg : ' This  is not a number';
+    let total_sum = sum ? sum/avg : "<span class='span'>*</span> This  is not a number";
     
    
     // percent value make ===
@@ -145,12 +145,12 @@ let result = (component) =>{
     total_txt.innerHTML = sum;
     percent_txt.textContent = percent + '%';
     comment_txt.textContent = comment;
-    message.textContent =  component.err ? component.err && colorRed : 'Good Job ! Say to Tamim Thanks :  ' ;      
+    message.innerHTML =  component.err ? component.err && colorRed : 'Good Job ! Say to Tamim Thanks :  ' ;      
    
 }
 
 const colorRed = () =>{
-    message.style.color = 'red';
+    message.style.color = '#fff';
     message.style.fontStyle = 'italic';
     
 }
