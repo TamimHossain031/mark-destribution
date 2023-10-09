@@ -12,7 +12,10 @@ let total_txt=document.querySelector('.total');
 let percent_txt = document.querySelector('.percent');
 let comment_txt = document.querySelector('.comment');
 let show = document.querySelector('.show');
-
+let popup = document.querySelector('.popup');
+let popup_show = document.querySelector('.fa-info');
+let popup_close = document.querySelector('.close');
+let overly = document.querySelector('.overlay');
 
 //show result event =======
 btn1.addEventListener('click',()=>{
@@ -27,7 +30,7 @@ btn1.addEventListener('click',()=>{
     //Get All subjects mark ===
     let marks = digit.value;
    // Marks string to array ===    
-    const array = marks.split(',');
+    const array = marks.split('+');
     //decler component object ===
     let component = {};
     component.array = array;
@@ -163,3 +166,12 @@ const colorNrl = () =>{
 // Reset all value ===
 btn2.addEventListener('click',reset);
 
+popup_show.addEventListener('click',()=>{
+    popup.classList.add('active');
+    overly.classList.add('active');
+})
+
+popup_close.addEventListener('click',()=>{
+    popup.classList.remove('active');
+    overly.classList.remove('active');
+})

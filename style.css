@@ -7,6 +7,7 @@
     font-family: 'Raleway', sans-serif;
 }
 body{
+    position: relative;
     width:auto;
     height:100dvh;
     background:url(./images/bg.png);
@@ -17,6 +18,7 @@ body{
     align-items: center;
 }
 #main{     
+    position: relative;
     width: 350px;    
     padding:40px 15px;
     margin:15px;
@@ -111,4 +113,102 @@ tr{
 .span{
     color:red;
     font-size:20px;
+}
+.fa-info{
+    position:absolute;
+    top:10px;
+    right:10px;
+    color:#fff;
+    background-color: #273c75;
+    width:40px;
+    height:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:50%;
+    transform:scale(0.8);
+    transition: 0.3s all ease;
+    cursor: pointer;
+    animation: document 1s infinite;
+}
+.fa-info:hover{
+    transform:scale(1);
+    animation-play-state: paused;
+
+}
+ .overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:#3d3f44c4;
+    width:100dvw;
+    height: 100dvh;
+    z-index: 1;
+    display:none;
+ }
+ .overlay.active{
+    display:block;
+ }
+ .popup{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:300px;
+    height:200px;
+    background-color: #fff;
+    font-size:12px;
+    letter-spacing:0.8px;
+    line-height:14px;
+    padding:10px 30px;
+    border-radius:10px;
+    z-index: 2; 
+    transition:1s;
+    display:none;
+ }
+ .popup.active{
+    display:block;
+
+   
+ }
+ .popup h3,p{
+    text-align: center;
+ }
+ .popup p{
+    margin-bottom: 10px;
+ }
+ .popup .close{
+    font-size:23px;
+    position:absolute;
+    top:10px;
+    right:5px;
+    cursor: pointer;
+ }
+
+/* keyframes */
+@keyframes document {
+    0%{
+        transform:scale(0.7);
+    }
+    50%{
+        transform:scale(1);
+    }
+    75%{
+        transform: scale(0.5);
+    }
+    90%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(0.7);
+    }
+    
+}
+@keyframes popup {
+    from{
+        transform:scale(0);
+    }
+    To{
+        transform:scale(1);
+    }
 }
