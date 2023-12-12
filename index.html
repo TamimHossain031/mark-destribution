@@ -13,34 +13,9 @@
         <!-- Title -->
         <h1 class="title">Mark Calculation</h1>
         <p class="message">Enter all subject mark : </p>
-
-        <!-- Input field -->
-        <div class="input-field">
-            <input id="digit" type="text" placeholder="Enter Number...">
-            <!-- Select class Name -->
-            <select id="class">
-                <option value=" " >Choose Class</option>
-                <option value="4,3.5">Class play</option>
-                <option value="5,4">Class Nursery</option>
-                <option value="6,4.5">Class One</option>
-                <option value="6,4.5">Class Two</option>
-                <option value="8,7.5">Class Three</option>
-                <option value="8,7.5">Class Four</option>
-                <option value="6,6">Class Five</option>
-                <option value="10,4.5">Class six</option>
-                <option value="10,4.5">Class Seven</option>
-                <option value="7,6.25">Class Eight</option>
-                <option value="12,11.5">Class Nine</option>
-            </select>
-            <!-- Show result button -->
-            <button id="button-1" type="submit">Show Result</button>
-            <!-- reset button -->
-            <button id="button-2" type="submit">Reset</button>
-           
-        </div>
         <!-- result table -->
         <table>
-            <p class="show"></p>
+            
             <tr>
                 <td>Total Number</td>
                 <td>:</td>
@@ -58,6 +33,58 @@
             </tr>
             
         </table>
+
+        <!-- Input field -->
+        <div class="input-field">
+            <input id="digit" type="text"  value="0" disabled>
+            <!-- Select class Name -->
+            <select id="class">
+                <option value=" " >Choose Class</option>
+                <option value="4,3.5">Class play</option>
+                <option value="5,4">Class Nursery</option>
+                <option value="6,4.5">Class One</option>
+                <option value="6,4.5">Class Two</option>
+                <option value="8,7.5">Class Three</option>
+                <option value="8,7.5">Class Four</option>
+                <option value="6,6">Class Five</option>
+                <option value="10,4.5">Class six</option>
+                <option value="10,4.5">Class Seven</option>
+                <option value="7,6.25">Class Eight</option>
+                <option value="12,11.5">Class Nine</option>
+            </select>
+            <!--Calculator-->
+            <div class="calculator">
+                <div class="row">
+                    <button type="button">1</button>
+                    <button type="button">2</button>
+                    <button type="button">3</button>
+                    <button type="button">4</button>
+                </div>
+                <div class="row">
+                    <button type="button">5</button>
+                    <button type="button">6</button>
+                    <button type="button">7</button>
+                    <button type="button">8</button>
+                </div>
+                <div class="row">
+                    <button type="button">9</button>
+                    <button type="button">0</button>
+                    <button type="button" class="opr">+</button>
+                    
+                </div>
+                <div class="row">
+                    <button type="button"  id="button-4">AC</button>
+                    <button type="button" >DEL</button>                    
+                    <button type="button" class="opr" id="button-3">=</button>                    
+                </div>
+            </div>
+            <!-- Show result button -->
+            <!-- <button id="button-1" type="submit">Show Result</button> -->
+            <!-- reset button -->
+            <!-- <button id="button-2" type="submit">Reset</button> -->
+           
+        </div>
+        
 
         <span class="author-name">Design & Develop By <a href="https://web.facebook.com/massenger.net">Tamim </a></span>
         <i class="fa-solid fa-info" style="color: #ffffff;"></i>           

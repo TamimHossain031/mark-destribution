@@ -20,19 +20,21 @@ body{
 #main{     
     position: relative;
     width: 350px;    
-    padding:40px 15px;
+    padding:20px 15px;
     margin:15px;
-    background-color:rgba(118, 74, 241, 0.459);
+    background:linear-gradient(145deg,#0C3348,#0B2640);
     backdrop-filter:blur(20px);
     border-radius:10px;
 }
 .title{
     text-align: center;
-    padding-block:20px;
+    color:#32ADA6
+    
 }
 .message{
     font-size: 14px;
     margin:10px;
+    color:#fff;
 }
 
 .input-field{
@@ -184,7 +186,41 @@ tr{
     right:5px;
     cursor: pointer;
  }
-
+ /*Calcultaor*/
+ .calculator{
+    width:80%;
+    margin:0 auto;
+    
+ }
+ .calculator .row{
+    display:flex;
+    justify-content:space-between;
+ }
+ .calculator .row button{
+    width:60px;
+    height:60px;
+    font-size: 24px;
+    flex-grow:1;
+    background:transparent;
+    border:none;
+    outline:none;
+    color:#fff;
+ }
+ .calculator .row button:active{
+    color:#35B4A8;
+ }
+ .calculator .row button.opr{
+    flex-grow:16;
+    font-size:50px;
+ }
+ .calculator .row button#button-3{
+    background:linear-gradient(180deg,#35B4A8,#2C8996);
+    border-radius:10px;
+ }
+ .calculator .row button#button-3:active{
+    color:#fff;
+    background:linear-gradient(180deg,#2C8996,#35B4A8);
+ }
 /* keyframes */
 @keyframes document {
     0%{

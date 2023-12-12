@@ -1,6 +1,7 @@
 
+
 //value initialization =======
-let digit = document.getElementById('digit');
+// let digit = document.getElementById('digit');
 let message = document.querySelector('.message');
 let class_sub = document.getElementById('class');
 let btn1 = document.querySelector('#button-1');
@@ -11,14 +12,37 @@ let main = document.querySelector('#main');
 let total_txt=document.querySelector('.total');
 let percent_txt = document.querySelector('.percent');
 let comment_txt = document.querySelector('.comment');
-let show = document.querySelector('.show');
 let popup = document.querySelector('.popup');
 let popup_show = document.querySelector('.fa-info');
 let popup_close = document.querySelector('.close');
 let overly = document.querySelector('.overlay');
 
+// Calculator ========
+let digit = document.getElementById('digit');
+let buttons = document.querySelectorAll('button');
+let string = '';
+
+buttons.forEach(elem =>{
+    elem.addEventListener('click',(e)=>{
+    if(e.target.innerText == '='){
+        total = String(eval(string));
+        total_txt.innerHTML = total;
+        
+    }else if(e.target.innerText == 'AC'){
+        string = '';
+        reset()
+    }else if(e.target.innerText == 'DEL'){
+        string = string.slice(0,-1);
+        digit.value = string;
+    }else{
+        string += e.target.innerText
+        digit.value = string
+    }
+    })
+})
+
 //show result event =======
-btn1.addEventListener('click',()=>{
+btn3.addEventListener('click',()=>{
     //Get Class Name & Avg mark ===
     let class_detail = class_sub.value;
     // String to array ===
