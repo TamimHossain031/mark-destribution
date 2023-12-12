@@ -49,12 +49,13 @@ body{
     padding:0 10px;
     background-color:transparent;
     outline:none;
-    border:1px solid #aac5d3a1;
+   border:none;
+   outline:none;
     color:#ffffff;
     margin-bottom: 10px;
     border-radius:5px;
     font-size:18px;
-    
+    bo
 }
 #class{
     background-color:#273c75 ;

@@ -169,7 +169,7 @@ let result = (component) =>{
     //destractur ==
     const[sum,percent,comment] = [component.sum,component.percent_value,component.comment];
     //assign value in web page ====
-    total_txt.innerHTML = sum;
+    
     percent_txt.textContent = percent + '%';
     comment_txt.textContent = comment;
     message.innerHTML =  component.err ? component.err && colorRed : 'Good Job ! Say to Tamim Thanks :  ' ;      
@@ -188,11 +188,12 @@ const colorNrl = () =>{
 }
 
 // Reset all value ===
-btn2.addEventListener('click',reset);
+// btn2.addEventListener('click',reset);
 
 popup_show.addEventListener('click',()=>{
     popup.classList.add('active');
     overly.classList.add('active');
+    
 })
 
 popup_close.addEventListener('click',()=>{
