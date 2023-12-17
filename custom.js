@@ -48,7 +48,7 @@ btn3.addEventListener('click',()=>{
     // String to array ===
     let class_detail_a = class_detail.split(',');
     // subjects ===
-    let subjects = parseInt(class_detail_a[0]);
+    let subjects = parseInt(class_detail_a[0]) + 1;
     //subjects avg mark ===
     let sub_avgmark = parseFloat(class_detail_a[1]);
     //Get All subjects mark ===
@@ -167,7 +167,7 @@ const comment = (component)=>{
 //  Result function ====
 let result = (component) =>{
     //destractur ==
-    const[sum,percent,comment] = [component.sum,component.percent_value,component.comment];
+    const[percent,comment] = [component.percent_value,component.comment];
     //assign value in web page ====
     
     percent_txt.textContent = percent + '%';
